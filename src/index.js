@@ -20,5 +20,17 @@ for (let i = 0; i < produtosDisponiveis.length; i++) {
 
 const qtdProduto = prompt (`O produto ${produtosEscolhidos} custa: R$ ${precoProduto.toFixed(2)}. Quantas unidades você deseja adicionar ao carrinho?`);
 console.log(qtdProduto);
+
 let carrinho = [];
+
+carrinho.push({
+  nome: produtosEscolhidos,
+  preco: precoProduto,
+  quantidade: qtdProduto,
+});
+
+alert(`Você adicionou ${qtdProduto} unidades do produto ${produtosEscolhidos} ao carrinho!`);
+
+let maisProdutos = confirm(`Deseja adicionar mais produtos?`);
+console.log(maisProdutos);
 
