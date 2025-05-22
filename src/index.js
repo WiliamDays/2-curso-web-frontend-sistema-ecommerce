@@ -12,10 +12,8 @@ let maisProdutos
 
 do{
 const produtosEscolhidos = prompt('Qual produto você deseja comprar? (Camisa, Calça, Sapato ou Boné)');
+
 // Verifica se o produto escolhido está disponível
-
-
-
 for (let i = 0; i < produtosDisponiveis.length; i++) {
   if (produtosEscolhidos === produtosDisponiveis[i].nome) {
     console.log(`Produto ${produtosEscolhidos} encontrado!`);
@@ -23,7 +21,6 @@ for (let i = 0; i < produtosDisponiveis.length; i++) {
 }}
 
 const qtdProduto = prompt (`O produto ${produtosEscolhidos} custa: R$ ${precoProduto.toFixed(2)}. Quantas unidades você deseja adicionar ao carrinho?`);
-
 
 carrinho.push({
   nome: produtosEscolhidos,
@@ -35,3 +32,5 @@ alert(`Você adicionou ${qtdProduto} unidades do produto ${produtosEscolhidos} a
 
 maisProdutos = confirm(`Deseja adicionar mais produtos?`);
 }while(maisProdutos === true)
+
+alert("Os produtos ")
