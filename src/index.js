@@ -69,13 +69,18 @@ do{
 //Estrtura para exibição das quantidades, itens e valores dos produtos adicionados ao carrinho
 if(maisProdutos === false){
   let valorTotal = 0;
+  let mensagemCarrinho = `Produtos no carrinho: \n`
+  let subTotal = 0
 
   for (let i = 0; i < carrinho.length; i++) {
-    valorTotal += carrinho[i].preco * carrinho[i].quantidade;
-    alert(`Produtos no carrinho:
-    ${i+1}. ${carrinho[i].nome} - R$ ${carrinho[i].preco.toFixed(2)} x ${carrinho[i].quantidade} = R$ ${(carrinho[i].preco * carrinho[i].quantidade).toFixed(2)}`)
-    alert(`O valor total da compra é: R$ ${valorTotal.toFixed(2)}`)
+    let item = carrinho[i]
+    subTotal = item.preco * item.quantidade    
+    valorTotal += subTotal
+    mensagemCarrinho += `  ${i + 1}. ${item.nome} - R$ ${item.preco.toFixed(2)} x ${item.quantidade} = ${subTotal.toFixed(2)} \n`
   }
+  alert(`
+  ${mensagemCarrinho}.\n O valor total da compra é: R$${valorTotal.toFixed(2)}
+  `)
 }
     
 
